@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
-import earthTexture from "@/assets/earth-texture.jpg";
+import earthTexture from "@/assets/earth-hq.jpg";
 
 const AshnetPortal = () => {
   return (
@@ -21,30 +21,32 @@ const AshnetPortal = () => {
       
       {/* Content Overlay */}
       <div className="relative z-10 flex min-h-screen items-center justify-center p-8">
-        <Card className="glass-card max-w-lg w-full p-8 text-center space-y-6 cosmic-glow">
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Welcome to Ashnet
+        <Card className="glass-card max-w-lg w-full p-8 text-center space-y-6 cosmic-glow animate-slide-up">
+          <div className="space-y-6">
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-text-glow animate-float tracking-wider">
+              ASHNET
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent animate-scale-glow"></div>
+            <p className="text-xl text-muted-foreground animate-slide-up font-light tracking-wide" style={{ animationDelay: '0.2s' }}>
               Click Below to get redirected
             </p>
           </div>
           
-          <div className="pt-4">
+          <div className="pt-6">
             <Button
               variant="cosmic"
               size="lg"
-              className="w-full md:w-auto text-lg px-8 py-3"
+              className="w-full md:w-auto text-lg px-10 py-4 animate-scale-glow font-semibold tracking-wide"
               onClick={() => window.open('https://xa2gkp3eqbbp.connect.remote.it/#/login', '_blank')}
+              style={{ animationDelay: '0.4s' }}
             >
-              <ExternalLink className="mr-2 h-5 w-5" />
-              Dashboard CasaOS
+              <ExternalLink className="mr-3 h-6 w-6" />
+              DASHBOARD CASAOS
             </Button>
           </div>
           
-          <div className="text-xs text-muted-foreground opacity-70 pt-4">
-            Secure Remote Access Portal
+          <div className="text-sm text-muted-foreground opacity-80 pt-6 animate-slide-up tracking-widest font-light" style={{ animationDelay: '0.6s' }}>
+            ◦ SECURE REMOTE ACCESS PORTAL ◦
           </div>
         </Card>
       </div>
